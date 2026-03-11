@@ -1,0 +1,7 @@
+{
+  "name": "odometer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
