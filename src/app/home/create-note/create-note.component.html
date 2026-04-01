@@ -1,0 +1,49 @@
+<form [formGroup]="noteForm" (ngSubmit)="onSubmit()">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Ghi sổ</ion-title>
+      <ion-buttons slot="start">
+        <ion-button (click)="cancel()">Đóng</ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button type="submit">Lưu</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content [fullscreen]="true">
+    <ion-list inset="true">
+      <ion-item>
+        <ion-icon name="speedometer" color="primary" slot="start"></ion-icon>
+        <ion-input
+          label="Số km"
+          type="number"
+          inputmode="numeric"
+          clearInput="true"
+          formControlName="totalKm"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="calendar" color="primary" slot="start"></ion-icon>
+        <ion-label>Ngày</ion-label>
+        <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+        <ion-modal [keepContentsMounted]="true">
+          <ng-template>
+            <ion-datetime
+              formControlName="date"
+              id="datetime"
+              presentation="date"
+              [formatOptions]="{
+                date: {
+                  day: '2-digit',
+                  month: '2-digit',
+                  year: 'numeric',
+                },
+              }"
+            ></ion-datetime>
+          </ng-template>
+        </ion-modal>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</form>
