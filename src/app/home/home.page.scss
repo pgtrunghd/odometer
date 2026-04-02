@@ -1,0 +1,22 @@
+.inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper {
+  flex: 1;
+}
+
+ion-range {
+  padding: 0;
+}
+
+.range-disabled {
+  opacity: 1;
+}
+
+ion-range::part(knob) {
+  display: none !important;
+}

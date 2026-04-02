@@ -1,27 +1,7 @@
 import { DecimalPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import {
-  IonContent,
-  IonHeader,
-  IonItem,
-  IonLabel,
-  IonList,
-  IonNote,
-  IonTitle,
-  IonToolbar,
-  IonFab,
-  IonFabButton,
-  IonIcon,
-  IonModal,
-  IonButtons,
-  IonButton,
-  IonCheckbox,
-  CheckboxCustomEvent,
-  ModalController,
-  IonListHeader,
-  IonText,
-} from '@ionic/angular/standalone';
-import { add, bicycle } from 'ionicons/icons';
+import { IonContent, IonHeader, IonItem, IonLabel, IonList, IonNote, IonTitle, IonToolbar, IonFab, IonFabButton, IonIcon, IonModal, IonButtons, IonButton, IonCheckbox, CheckboxCustomEvent, ModalController, IonListHeader, IonText, IonRange, IonBadge, IonGrid, IonChip } from '@ionic/angular/standalone';
+import { add, bicycle, water } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
 import { CreateNoteComponent } from './create-note/create-note.component';
 @Component({
@@ -47,11 +27,15 @@ import { CreateNoteComponent } from './create-note/create-note.component';
     IonCheckbox,
     IonListHeader,
     IonText,
-  ],
+    IonRange,
+    IonBadge,
+    IonGrid,
+    IonChip
+],
 })
 export class HomePage implements OnInit {
   constructor(private modalCtrl: ModalController) {
-    addIcons({ add, bicycle });
+    addIcons({ add, bicycle, water });
   }
 
   presentingElement!: HTMLElement | null;

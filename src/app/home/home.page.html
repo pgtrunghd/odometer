@@ -1,7 +1,10 @@
 <ion-list class="ion-page">
   <ion-header [translucent]="true">
     <ion-toolbar>
-      <ion-title>Sổ bảo dưỡng</ion-title>
+      <ion-title>Trang chủ</ion-title>
+      <ion-buttons slot="end">
+        <ion-button>Cập nhật km</ion-button>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
 
@@ -10,16 +13,19 @@
       <ion-item>
         <ion-icon name="bicycle" color="success" slot="start"></ion-icon>
         <ion-label>Tổng số km:</ion-label>
-        <ion-note slot="end" color="success"
-          >{{ 2000000 | number: '1.0-0' }} km</ion-note
+        <ion-chip slot="end" color="success"
+          >{{ 2000000 | number: '1.0-0' }} km</ion-chip
         >
       </ion-item>
       <ion-item>
-        <ion-icon name="bicycle" color="success" slot="start"></ion-icon>
-        <ion-label>Tổng số km:</ion-label>
-        <ion-note slot="end" color="success"
-          >{{ 2000000 | number: '1.0-0' }} km</ion-note
-        >
+        <ion-icon name="water" color="warning" slot="start"></ion-icon>
+        <div class="wrapper">
+          <div class="inner">
+            <ion-label>Thay nhớt máy: </ion-label>
+            <ion-chip color="warning">Còn 10/1000 km</ion-chip>
+          </div>
+          <ion-range disabled="true" max="1000" value="100"></ion-range>
+        </div>
       </ion-item>
     </ion-list>
 
